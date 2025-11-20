@@ -5,10 +5,15 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 import kagglehub
 
+
 path = kagglehub.model_download("dekxrma/car-brand-identifier/keras/default")
-if ".keras" not in path:
-    path = os.path.join(path, "car_brand_idf.keras")
-model = load_model(path)
+
+for f in os.listdir(path):
+    if f.endswith(".keras"):
+        model_path = os.path.join(path, f)
+        break
+
+model = load_model(model_path)
 
 
 car_brand_labels = sorted(['bmw', 'ferrari', 'aston martin', 'mercedes-benz', 'rover', 'lamborghini', 'mini', 'cadillac', 'toyota',
