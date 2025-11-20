@@ -1,15 +1,14 @@
 import os
 import numpy as np
-from PIL import Image
-import kagglehub
-
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
+from PIL import Image
+import kagglehub
 
 path = kagglehub.model_download("dekxrma/car-brand-identifier/keras/default")
 model_path = os.path.join(path, "car_brand_idf.keras")
 
-model = load_model(model_path)
+model = load_model(model_path, compile=False)
 
 
 car_brand_labels = sorted(['bmw', 'ferrari', 'aston martin', 'mercedes-benz', 'rover', 'lamborghini', 'mini', 'cadillac', 'toyota',
