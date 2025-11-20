@@ -7,11 +7,8 @@ import kagglehub
 
 
 path = kagglehub.model_download("dekxrma/car-brand-identifier/keras/default")
-
-for f in os.listdir(path):
-    if f.endswith(".keras"):
-        model_path = os.path.join(path, f)
-        break
+print(path)
+print(os.listdir(path))
 
 model = load_model(model_path)
 
