@@ -7,8 +7,7 @@ import kagglehub
 
 
 path = kagglehub.model_download("dekxrma/car-brand-identifier/keras/default")
-print(path)
-print(os.listdir(path))
+model_path = os.path.join(path, "car_brand_idf.keras")
 
 model = load_model(model_path)
 
