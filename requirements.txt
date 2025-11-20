@@ -1,6 +1,6 @@
 streamlit
 matplotlib
 Pillow
-tensorflow
+tensorflow==2.18.0
 numpy
 kagglehub
