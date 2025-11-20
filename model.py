@@ -1,10 +1,13 @@
 import os
 import numpy as np
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.models import load_model
 from PIL import Image
 import kagglehub
 
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.models import load_model
 
 path = kagglehub.model_download("dekxrma/car-brand-identifier/keras/default")
 model_path = os.path.join(path, "car_brand_idf.keras")
