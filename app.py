@@ -1,5 +1,4 @@
 import os
-os.environ["TF_USE_LEGACY_KERAS"] = "1"
 import streamlit as st
 from PIL import Image
 import matplotlib.pyplot as plt
