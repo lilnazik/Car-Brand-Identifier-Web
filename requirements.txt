@@ -1,7 +1,6 @@
+tensorflow==2.15.0
+numpy==1.26.3
+kagglehub
 streamlit
 matplotlib
 Pillow
-tensorflow==2.15.0
-numpy<2.0.0
-kagglehub
-tf-keras
